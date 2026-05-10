@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 600px;
+    margin: 0 auto;
+}
+
+
+
+.main-intro {
+    background-image: url("../img/burger.png");
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+}
