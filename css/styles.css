@@ -1,17 +1,39 @@
-* {
-    box-sizing: border-box;
-}
-
 body {
-    width: 600px;
-    margin: 0 auto;
+    background-color: grey;
 }
 
-
-
-.main-intro {
+header {
     background-image: url("../img/burger.png");
     background-size: cover;
     background-position: center;
-    color: #ffffff;
+    color: white;
+    padding: 10px;
+    width: 600px;
+    height: 164px;
+    margin: 0 auto;
+}
+
+.main-header {
+    font-family: 'Smythe', cursive;
+    font-size: 36px;
+    margin: 0;
+    padding-top: 25px;
+    padding-left: 25px;
+    /* padding: 25px; */
+}
+
+.main-paragraph {
+    font-family: 'Smythe', cursive;
+    font-size: 22px;
+    margin: 0;
+    padding-top: 10px;
+    padding-left: 25px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    width: 600px;
+    margin: 20px auto;
 }

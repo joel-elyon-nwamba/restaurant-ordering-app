@@ -3,36 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurant ordering app</title>
-    <link href="css/styles.css" rel="stylesheet"/>
+    <title>Restaurant Ordering App</title>
+    <link href="css/styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Smythe&display=swap" rel="stylesheet">
 </head>
 <body>
-    <section class="main-intro">
     <header>
-        <h1>Jimmy's Diner</h1>
+        <h1 class="main-header">Jimmy's Diner</h1>
+        <p class="main-paragraph">The best burgers and pizzas in town.</p>
     </header>
-    <div>
-        <p>The best burgers and pizzas in town!</p>
-    </div>
-    </section>
     <main>
-        <section class="pizza-section">
-            <h3>🍕Pizza</h3>
-            <p>Pepperoni, mushrooms, mozzarella</p>
-            <span>$14</span>
-            <button>+</button>
-        </section>
-        <section class="burger-section">
-            <h3>🍔 Hamburger</h3>
-            <p>beef, cheese, lettuce</p>
-            <span>$12</span>
-            <button>+</button>
-        </section>
-        <section class="beer-section">
-            <h3>🍺 Beer</h3>
-            <p>grain, hops, yeast, water</p>
-            <span>$12</span>
-            <button>+</button>
+        <section id = "menu">
+            <div class="menu-item">
+                <h1>🍕</h1>
+                <h2>Pizza</h2>
+                <p>Pepperoni, mushrooms, Mozzarella</p>
+                <p>$14</p>
+                <button class="order-btn">+</button>
+            </div>
+            <div class="menu-item">
+                 <h1>🍔</h1>
+                <h2>Burger</h2>
+                <p>Beef, cheese, lettuce</p>
+                <p>$12</p>
+                <button class="order-btn">+</button>
+            </div>
+            <div class="menu-item">
+                 <h1>🍺</h1>
+                <h2>Beer</h2>
+                <p>$12</p>
+                <button class="order-btn">+</button>
+            </div>
         </section>
     </main>
 </body>
