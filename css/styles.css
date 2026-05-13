@@ -34,6 +34,13 @@ main {
     display: flex;
     justify-content: center;
     background-color: white;
-    width: 600px;
-    margin: 20px auto;
+    width: 620px;
+    margin: 0 auto;
+}
+
+.menu-item {
+    border-bottom: 4px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
