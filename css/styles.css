@@ -1,5 +1,6 @@
 body {
     background-color: grey;
+    font-family: 'Smythe', cursive;
 }
 
 header {
@@ -36,11 +37,48 @@ main {
     background-color: white;
     width: 620px;
     margin: 0 auto;
+    height: 708px;
 }
 
 .menu-item {
-    border-bottom: 4px solid black;
+    border-bottom: 1px solid #D2D2D2;
     display: flex;
+    width: 508px;
+    height:140px;
     justify-content: space-between;
     align-items: center;
 }
+
+.menu-item h1 {
+    font-size: 64px;
+    margin-left: 20px;
+}
+
+.menu-item h2 {
+    font-size: 28px;
+    font-weight: regular;
+}
+
+.menu-ingredients {
+    color: #8B8B8B;
+    font-size: 16px;
+
+}
+
+.menu-price {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.order-btn {
+    background-color: #FF6B6B;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
