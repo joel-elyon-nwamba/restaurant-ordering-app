@@ -1,27 +1,36 @@
 import { menuArray } from "./data.js";
-const menuSection = document.querySelector(".menu");
-const orderSection = document.querySelector(".order");
+const menuOption = document.querySelector(".menu");
+
+
 
 function render() {
     menuArray.forEach((item) => {
-        const divItem = document.createElement("div");
-        divItem.classList.add("menu-item");
-        divItem.innerHTML = `
-        <div class="menu-result">
-            <span class="emoji">${item.emoji}</span>
-            <div class="item-info">
+        const divItemMenu = document.createElement("div");
+        divItemMenu.classList.add("menu-item");
+        divItemMenu.innerHTML =  `
+            <div class="menu-results">
+                <span>${item.emoji}</span>
                 <h3>${item.name}</h3>
                 <p>${item.ingredients}</p>
                 <p>$${item.price}</p>
-                <button>+</button>
+                <button class="order-btn" data-id=${item.id}>+</button>
             </div>
-        </div>
         
         `
-        menuSection.appendChild(divItem);
+        menuOption.appendChild(divItemMenu)
     });
 }
 
 render();
 
-querySelectorAll(document)
+// Button selector 
+
+const buttons = document.querySelectorAll("button");
+
+buttons.forEach((button) => {
+    button.addEventListener("click", (e) => {
+        if(e.target.dataset.id){
+            console.log(e.target.dataset.id)
+        }
+    })
+})
