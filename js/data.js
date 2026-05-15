@@ -21,3 +21,7 @@ const menuArray = [
         id: 2
     }
 ]
+
+const orderArray = [];
+
+export { menuArray, orderArray }
