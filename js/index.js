@@ -36,6 +36,7 @@ buttons.forEach((button) => {
     button.addEventListener("click", (e) => {
         if(e.target.dataset.id){
             handleClick(e.target.dataset.id);
+            render();
         }
     })
 })
