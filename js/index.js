@@ -1,5 +1,7 @@
 import { menuArray } from "./data.js";
 const menuOption = document.querySelector(".menu");
+const totalOrder = document.querySelector(".order");
+let orders = [];
 
 function render() {
     menuArray.forEach((item) => {
@@ -21,14 +23,38 @@ function render() {
 
 render();
 
+
+function renderOrder() {
+    if(orders.length === 0) {
+        totalOrder.innerHTML = ""
+        return;
+    }
+    const total = orders.reduce((sum, item) => sum + item.price, 0)
+        totalOrder.innerHTML = `
+        <h2>Your Order</h2>
+        ${orders.map((item) => `
+            <div class="order-item">
+                <span>${item.name}</span>
+                <span>$${item.price}</span>
+                <button class="remove-btn" data-id="${item.id}">remove</button>
+            </div>
+        `).join("")}
+        <hr>
+        <div class="order-total">
+            <strong>Total: $${total}</strong>
+        </div>
+        <button class="complete-btn">Complete Order</button>
+    `;
+}
+
 const buttons = document.querySelectorAll("button");
 
 // HandleClick that will display all the information once thwe user clicks on the button
 function handleClick(orderId) {
-    const orderIdMenu = menuArray.filter((item) => {
-        return item.id === parseInt(orderId)
-    })[0];
+    const orderIdMenu = menuArray.find((item) =>  item.id === parseInt(orderId))
+    orders.push(orderIdMenu);
     console.log(orderIdMenu);
+      renderOrder();
 }
 
 // Button selector
@@ -36,7 +62,6 @@ buttons.forEach((button) => {
     button.addEventListener("click", (e) => {
         if(e.target.dataset.id){
             handleClick(e.target.dataset.id);
-            render();
         }
     })
 })
