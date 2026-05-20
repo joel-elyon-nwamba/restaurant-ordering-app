@@ -64,4 +64,23 @@ buttons.forEach((button) => {
             handleClick(e.target.dataset.id);
         }
     })
-})
+});
+
+const completeBtnOrder = document.querySelector(".complete-btn");
+const formOrder = document.querySelector(".form-order");
+
+completeBtnOrder.addEventListener("click", completeOrder);
+
+function completeOrder() {
+    const divInfo = document.createElement("div");
+    divInfo.classList.add("menu-purchased");
+    divInfo.innerHTML = `
+    <h2>Enter Card details</h2>
+    <input type="text" placeholder="Enter your name"/>
+    <input type="tel" placeholder="Enter card number"/>
+    <input type="text" placeholder="Enter CVV"/>
+    <button type="submit">Pay</button>
+    `
+    formOrder.appendChild(divInfo);
+}
+

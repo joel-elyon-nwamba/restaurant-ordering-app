@@ -31,14 +31,14 @@ header {
     padding-left: 25px;
 }
 
-main {
+/* main {
     display: flex;
     justify-content: center;
     background-color: white;
     width: 620px;
     margin: 0 auto;
     height: 708px;
-}
+} */
 
 .menu {
     display: flex;
